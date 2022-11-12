@@ -7,8 +7,8 @@ license = "Apache-2.0"
 authors = ["Duncan McGreggor <oubiwann@gmail.com>"]
 repository = "https://github.com/oxur/twyngled"
 documentation = "https://docs.rs/twyngled/"
-categories = ["clients"]
-keywords = ["games", "ascii", "IF", "MUDs", "MUSHes"]
+categories = ["games", "web-programming::http-client", "command-line-interface"]
+keywords = ["ascii", "IF", "MUDs", "MUSHes", "terminal"]
 exclude = ["/.github", "/resources", ".gitignore"]
 edition = "2021"
 
