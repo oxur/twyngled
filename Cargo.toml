@@ -2,7 +2,7 @@
 name = "twyngled"
 description = "A specialised terminal Twine client for playing online MUDs"
 readme = "README.md"
-version = "0.0.1"
+version = "0.1.0-dev"
 license = "Apache-2.0"
 authors = ["Duncan McGreggor <oubiwann@gmail.com>"]
 repository = "https://github.com/oxur/twyngled"
