@@ -13,7 +13,7 @@ exclude = ["/.github", "/resources", ".gitignore"]
 edition = "2021"
 
 [lib]
-name = "twyg"
+name = "twyngled"
 
 [dependencies]
 twyg = "0.1.10"
