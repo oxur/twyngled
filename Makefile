@@ -13,7 +13,7 @@ build:
 	@cargo build
 
 test:
-	@cargo test
+	@RUST_BACKTRACE=1 cargo test
 
 demos:
 	@cargo run --example=demo
