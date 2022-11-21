@@ -9,12 +9,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Get Updates
+      run: make deps
     - name: Build
-      run: cargo build
+      run: make build
     - name: Run tests
-      run: cargo test
+      run: make test
     - name: Run Demo
-      run: cargo run --example=demo
+      run: make demos
     - name: Notify CI/CD Slack Channel
       uses: innocarpe/actions-slack@v1
       with:
