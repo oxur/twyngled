@@ -1,3 +1,6 @@
+BIN_DIR = ./bin
+BIN = target/release/noise
+
 default: all
 
 all: deps build test demos
@@ -9,8 +12,13 @@ auth:
 	@echo '    eval $$(ssh-agent -s) && ssh-add'
 	@echo
 
-build:
-	@cargo build
+$(BIN_DIR):
+	mkdir -p $(BIN_DIR)
+
+build: $(BIN_DIR)
+	@cargo build --release
+	@rm -f $(BIN_DIR)/*
+	@cargo install --path . --root .
 
 test:
 	@RUST_BACKTRACE=1 cargo test

@@ -1,3 +1,4 @@
-pub fn no_op() {
+pub use app::run;
 
-}
+pub mod app;
+pub mod ui;
