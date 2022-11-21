@@ -16,7 +16,7 @@ edition = "2021"
 name = "twyngled"
 
 [dependencies]
-confyg = "0.1.0"
+confyg = "0.1.1"
 serde_json = "1.0"
 tui = "0.19.0"
 twyg = "0.1.10"
