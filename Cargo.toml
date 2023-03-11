@@ -23,7 +23,7 @@ serde_json = "1.0"
 sled = "0.34.7"
 tui = "0.19.0"
 twyg = "0.2"
-twyne = "0.2.0-rc1"
+twyne = "0.2.0"
 unicode-width = "0.1.10"
 
 [[example]]
