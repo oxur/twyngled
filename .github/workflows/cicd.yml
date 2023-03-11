@@ -1,6 +1,11 @@
 name: CI/CD
 
-on: [push]
+on:
+  workflow_dispatch:
+  push:
+  pull_request:
+  schedule:
+  - cron: "37 3 * * *"
 
 jobs:
   build:
@@ -13,6 +18,8 @@ jobs:
       run: make deps
     - name: Build
       run: make build
+    - name: Lint
+      run: make cicd-lint
     - name: Run tests
       run: make test
     - name: Run Demo

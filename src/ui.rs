@@ -1,5 +1,6 @@
+use crate::app::App;
 use tui::{
-    backend::{Backend},
+    backend::Backend,
     layout::{Constraint, Direction, Layout},
     style::{Color, Modifier, Style},
     text::{Span, Spans, Text},
@@ -7,7 +8,6 @@ use tui::{
     Frame,
 };
 use unicode_width::UnicodeWidthStr;
-use crate::app::App;
 
 pub enum InputMode {
     Normal,
@@ -83,7 +83,7 @@ pub fn draw<B: Backend>(f: &mut Frame<B>, app: &App) {
         .iter()
         .enumerate()
         .map(|(i, m)| {
-            let content = vec![Spans::from(Span::raw(format!("{}: {}", i, m)))];
+            let content = vec![Spans::from(Span::raw(format!("{i}: {m}")))];
             ListItem::new(content)
         })
         .collect();

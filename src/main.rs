@@ -1,16 +1,12 @@
-
 use crossterm::{
     event::{DisableMouseCapture, EnableMouseCapture},
     execute,
     terminal::{disable_raw_mode, enable_raw_mode, EnterAlternateScreen, LeaveAlternateScreen},
 };
 use std::{error::Error, io};
-use tui::{
-    backend::CrosstermBackend,
-    Terminal,
-};
-use twyngled;
-use twyngled::app::App;
+use tui::{backend::CrosstermBackend, Terminal};
+
+use twyngled::App;
 
 fn main() -> Result<(), Box<dyn Error>> {
     // setup terminal
@@ -34,7 +30,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     terminal.show_cursor()?;
 
     if let Err(err) = res {
-        println!("{:?}", err)
+        println!("{err:?}")
     }
 
     Ok(())
